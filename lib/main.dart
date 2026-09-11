@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'views/redacteur_interface.dart';
+
 void main() {
   runApp(const MonAppli());
 }
@@ -32,6 +34,18 @@ class PageAccueil extends StatelessWidget {
           onPressed: () {},
         ),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.people),
+            tooltip: 'Gestion des rédacteurs',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const RedacteurInterface(),
+                ),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () {},
